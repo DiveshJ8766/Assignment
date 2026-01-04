@@ -88,7 +88,7 @@ const CommentComponent = () => {
         return (
             <button
                 onClick={() => setIsOpen(true)}
-                className="fixed bottom-10 right-10 bg-white border border-slate-200 shadow-lg text-slate-700 font-medium py-2 px-4 rounded-full flex items-center gap-2 hover:bg-slate-50 transition-all hover:scale-105 cursor-pointer"
+                className="fixed bottom-4 right-4 sm:bottom-10 sm:right-10 bg-white border border-slate-200 shadow-lg text-slate-700 font-medium py-2 px-4 rounded-full flex items-center gap-2 hover:bg-slate-50 transition-all hover:scale-105 cursor-pointer z-50"
             >
                 Comments
                 <span className="bg-red-500 text-white text-xs font-bold px-1.5 py-0.5 rounded-full">
@@ -124,15 +124,15 @@ const CommentComponent = () => {
     };
 
     return (
-        <div className="w-full max-w-md mx-auto font-sans fixed bottom-4 right-4 z-50">
-            <div className="bg-white dark:bg-[#3b425e] rounded-2xl shadow-2xl border border-slate-200 dark:border-slate-700 overflow-hidden flex flex-col max-h-[85vh] transition-all duration-300">
+        <div className="w-full sm:max-w-md mx-auto font-sans fixed bottom-0 right-0 sm:bottom-4 sm:right-4 z-50">
+            <div className="bg-white dark:bg-[#3b425e] rounded-t-2xl sm:rounded-2xl shadow-2xl border border-slate-200 dark:border-slate-700 overflow-hidden flex flex-col max-h-[100vh] sm:max-h-[85vh] transition-all duration-300">
                 <CommentHeader
                     isDarkMode={isDarkMode}
                     onToggleTheme={() => setIsDarkMode(!isDarkMode)}
                     onClose={() => setIsOpen(false)}
                     commentsCount={comments.length}
                 />
-                <div className="p-6 overflow-y-auto overflow-x-hidden flex-1 space-y-6 bg-white dark:bg-[#3b425e] custom-scrollbar transition-all duration-300">
+                <div className="p-4 sm:p-6 overflow-y-auto overflow-x-hidden flex-1 space-y-6 bg-white dark:bg-[#3b425e] custom-scrollbar transition-all duration-300">
                     <CommentList
                         comments={comments}
                         editingId={editingId}

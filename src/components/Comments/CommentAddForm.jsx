@@ -44,9 +44,9 @@ const CommentAddForm = ({ onAdd, IS_DOC_REQUIRED }) => {
     };
 
     return (
-        <div className="p-4 border-t border-slate-100 dark:border-slate-700 bg-slate-50 dark:bg-[#2d3343] transition-all duration-300">
+        <div className="p-3 sm:p-4 border-t border-slate-100 dark:border-slate-700 bg-slate-50 dark:bg-[#2d3343] transition-all duration-300">
             {isAddingMode ? (
-                <div className="bg-white dark:bg-[#3b425e] p-4 rounded-xl border border-orange-300 dark:border-slate-600 shadow-md animate-in fade-in slide-in-from-bottom-2 duration-200 transition-all duration-300">
+                <div className="bg-white dark:bg-[#3b425e] p-3 sm:p-4 rounded-xl border border-orange-300 dark:border-slate-600 shadow-md animate-in fade-in slide-in-from-bottom-2 duration-200 transition-all duration-300">
                     <div className="space-y-4">
                         {/* Current Value Section */}
                         <div className="space-y-1">

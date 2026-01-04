@@ -23,7 +23,7 @@ const CommentEditForm = ({ comment, onSave, onCancel, IS_DOC_REQUIRED }) => {
     };
 
     return (
-        <div className="bg-white dark:bg-[#3b425e] p-4 rounded-xl border border-orange-300 dark:border-slate-600 shadow-md animate-in fade-in zoom-in-95 duration-200 transition-all duration-300">
+        <div className="bg-white dark:bg-[#3b425e] p-3 sm:p-4 rounded-xl border border-orange-300 dark:border-slate-600 shadow-md animate-in fade-in zoom-in-95 duration-200 transition-all duration-300">
             <div className="space-y-4">
                 {/* Current Value Section (Read Only) */}
                 <div className="space-y-1">

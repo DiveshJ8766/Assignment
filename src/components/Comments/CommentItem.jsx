@@ -19,7 +19,7 @@ const CommentItem = ({ comment, onEdit, onDelete }) => {
             </div>
 
             {/* MAIN CARD: Detailed "Submitted State" Design */}
-            <div className="bg-white dark:bg-[#2d3343] rounded-xl border border-slate-200 dark:border-slate-700 shadow-sm p-4 space-y-4 ml-[52px] transition-all duration-300">
+            <div className="bg-white dark:bg-[#2d3343] rounded-xl border border-slate-200 dark:border-slate-700 shadow-sm p-4 space-y-4 ml-8 sm:ml-[52px] transition-all duration-300">
                 {/* Current Value Section (Read Only) */}
                 <div className="space-y-1">
                     <p className="text-[10px] text-slate-400 uppercase tracking-widest font-semibold">Current value</p>
