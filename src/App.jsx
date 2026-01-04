@@ -1,19 +1,35 @@
+import React, { useState, useEffect } from 'react'
 import CommentComponent from './components/CommentComponent'
+import ThoughtProcess from './components/ThoughtProcess'
 
 function App() {
+  const [isDarkMode, setIsDarkMode] = useState(() => {
+    const saved = localStorage.getItem('theme');
+    return saved === 'dark';
+  });
+
+  // Listen for theme changes to keep ThoughtProcess in sync
+  useEffect(() => {
+    const observer = new MutationObserver(() => {
+      setIsDarkMode(document.documentElement.classList.contains('dark'));
+    });
+    observer.observe(document.documentElement, { attributes: true, attributeFilter: ['class'] });
+    return () => observer.disconnect();
+  }, []);
+
   return (
-    <div className="min-h-screen bg-[#333333] flex flex-col items-center justify-center p-4">
-      <div className="hidden sm:flex flex-col items-center gap-4 mb-8">
-        <h1 className="text-white text-3xl font-bold opacity-20">Component Assignment</h1>
-        <a
-          href="https://github.com/DiveshJ8766/Assignment.git"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-blue-400 hover:text-blue-300 underline text-sm transition-colors"
-        >
-          View Documentation (README.md) - How I thought for this assignment
-        </a>
+    <div className="min-h-screen bg-[#f3f4f6] dark:bg-[#333333] transition-all duration-300 relative overflow-x-hidden">
+      <div className="max-w-[1400px] mx-auto p-4 sm:p-8">
+        <div className="w-full lg:w-2/3 py-8">
+          <div className="mb-12 text-center lg:text-left">
+            <h1 className="text-slate-800 dark:text-white text-4xl font-bold mb-2">Technical Assignment</h1>
+            <p className="text-slate-500 dark:text-slate-400 font-medium">Advanced React Component Implementation</p>
+          </div>
+          <ThoughtProcess isDarkMode={isDarkMode} />
+        </div>
       </div>
+
+      {/* Floating Comment Component - Exactly as before */}
       <CommentComponent />
     </div>
   )

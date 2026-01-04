@@ -56,4 +56,5 @@ To keep the codebase maintainable and modular, I split the UI into the following
     -   Implemented a custom tooltip for long filenames to prevent UI overflow.
     -   Updated the Favicon to match the company branding for a professional touch.
 -   **Configurable Validation:** Included a constant (`IS_DOC_REQUIRED`) to easily toggle whether supporting documents are mandatory, providing flexibility for different business rules.
--   **Form Validation:** Robust error handling for "Field Label" and "Comment" inputs.
+-   **Form Validation:** Robust error handling for "Field Label", "Comment" and all other input fields.
+-   **Responsiveness:** Fully optimized for a seamless experience across all screen sizes (Mobile, Tablet, and Desktop).
